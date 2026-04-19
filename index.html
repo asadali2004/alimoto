@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Ali Motorcycle Workshop - Kathmandu's trusted bike mechanic. All types of bike service, repairs, washing, tyre puncture, emergency road service & new parts."/>
+<meta name="keywords" content="bike mechanic Kathmandu, motorcycle workshop Nepal, bike service Kathmandu, bike repair Nepal"/>
+<title>Ali Motorcycle Workshop | Kathmandu</title>
+<meta property="og:title" content="Ali Motorcycle Workshop | Kathmandu"/>
+<meta property="og:description" content="Kathmandu's trusted bike mechanic for service, repairs, washing, puncture and emergency roadside help."/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ali Motorcycle Workshop | Kathmandu"/>
+<meta name="twitter:description" content="Kathmandu's trusted bike mechanic for service, repairs, washing, puncture and emergency roadside help."/>
+<meta name="theme-color" content="#E8521A"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23E8521A'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white'%3EAM%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --dark: #111111;
+    --dark2: #1a1a1a;
+    --dark3: #222222;
+    --border: #2a2a2a;
+    --orange: #E8521A;
+    --orange-dim: #b03f12;
+    --orange-glow: rgba(232,82,26,0.15);
+    --cream: #f0ebe0;
+    --cream-dim: #b8b0a0;
+    --white: #ffffff;
+    --gray: #888;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+    --font-nepali: 'Tiro Devanagari Hindi', serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--dark); }
+  ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 2px; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw;
+    height: 64px;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav-logo span { color: var(--orange); }
+  .nav-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-cta {
+    background: var(--orange);
+    color: var(--white) !important;
+    padding: 8px 20px;
+    border-radius: 2px;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--orange-dim) !important; color: var(--white) !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--cream); border-radius: 1px; transition: all 0.3s; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 96px 5vw 56px;
+    overflow: hidden;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(340px, 620px) minmax(280px, 1fr);
+    gap: 56px;
+    align-items: start;
+    width: min(1400px, 100%);
+  }
+  .hero-copy { max-width: 620px; }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(232,82,26,0.08) 0%, transparent 70%),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.018) 79px,
+        rgba(255,255,255,0.018) 80px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.018) 79px,
+        rgba(255,255,255,0.018) 80px
+      );
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 24px;
+  }
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--orange);
+  }
+  .hero-h1 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(60px, 11vw, 130px);
+    line-height: 0.92;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .hero-h1 .orange { color: var(--orange); }
+  .hero-h1 .stroke {
+    -webkit-text-stroke: 1.5px var(--cream-dim);
+    color: transparent;
+  }
+  .hero-nepali {
+    font-family: var(--font-nepali);
+    font-size: clamp(18px, 3vw, 28px);
+    color: var(--cream-dim);
+    margin-bottom: 32px;
+    letter-spacing: 0.02em;
+  }
+  .hero-sub {
+    font-size: 16px;
+    color: var(--cream-dim);
+    max-width: 480px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-visual {
+    position: relative;
+    justify-self: end;
+    width: min(560px, 42vw);
+    max-height: 68vh;
+    padding: 14px;
+    border-radius: 18px 4px 18px 4px;
+    background:
+      linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01) 40%),
+      linear-gradient(145deg, rgba(232,82,26,0.16), rgba(232,82,26,0.03) 60%);
+    border: 1px solid rgba(232,82,26,0.35);
+    box-shadow:
+      0 14px 36px rgba(0,0,0,0.45),
+      0 0 0 1px rgba(255,255,255,0.02) inset;
+  }
+  .hero-visual::before {
+    content: "";
+    position: absolute;
+    inset: -10px 18px 18px -10px;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 14px 4px 14px 4px;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-visual::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: -6px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--orange) 0%, rgba(232,82,26,0.1) 80%);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-visual img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: min(68vh, 540px);
+    object-fit: cover;
+    object-position: center top;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px 2px 12px 2px;
+    filter: saturate(0.9) contrast(1.04);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--orange-dim); transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: transparent;
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 32px;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
+
+  .hero-stats {
+    display: flex; gap: 48px; margin-top: 64px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  @media (max-height: 860px) and (min-width: 900px) {
+    #hero { padding: 82px 5vw 34px; }
+    .hero-content { gap: 42px; }
+    .hero-h1 { font-size: clamp(52px, 8.5vw, 110px); }
+    .hero-tag { margin-bottom: 16px; }
+    .hero-nepali { margin-bottom: 18px; }
+    .hero-sub {
+      margin-bottom: 24px;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .hero-visual { width: min(500px, 40vw); }
+    .hero-visual img { height: min(58vh, 460px); }
+    .btn-primary, .btn-secondary {
+      padding: 13px 24px;
+      font-size: 13px;
+    }
+    .hero-stats {
+      margin-top: 30px;
+      padding-top: 20px;
+      gap: 28px;
+    }
+    .stat-num { font-size: 34px; }
+  }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 4px;
+  }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 100px 5vw; }
+  .section-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 16px;
+  }
+  .section-tag::before { content:''; width: 24px; height: 1px; background: var(--orange); display: block; }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(36px, 5vw, 58px);
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .section-nepali {
+    font-family: var(--font-nepali);
+    font-size: 18px;
+    color: var(--cream-dim);
+    margin-bottom: 48px;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--dark); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .service-card {
+    background: var(--dark);
+    padding: 36px 32px;
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .service-card:hover { background: var(--dark2); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .service-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+  }
+  .service-nepali {
+    font-family: var(--font-nepali);
+    font-size: 14px;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+  .service-desc {
+    font-size: 14px;
+    color: var(--cream-dim);
+    line-height: 1.6;
+  }
+
+  /* ── WHY US ── */
+  #why { background: var(--black); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .why-list { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
+  .why-item { display: flex; gap: 20px; align-items: flex-start; }
+  .why-num {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 48px;
+    color: var(--border);
+    line-height: 1;
+    min-width: 48px;
+    transition: color 0.3s;
+  }
+  .why-item:hover .why-num { color: var(--orange); }
+  .why-item-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .why-item-text { font-size: 14px; color: var(--cream-dim); line-height: 1.6; }
+
+  .emergency-box {
+    background: var(--orange);
+    padding: 40px;
+    border-radius: 2px;
+    position: sticky;
+    top: 88px;
+  }
+  .emergency-box h3 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .emergency-box .nepali {
+    font-family: var(--font-nepali);
+    font-size: 16px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+  }
+  .emergency-box p { font-size: 15px; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.6; }
+  .emergency-number {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--white);
+    display: block;
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── BOOKING ── */
+  #booking { background: var(--dark); }
+  .booking-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .booking-info p { font-size: 15px; color: var(--cream-dim); line-height: 1.7; margin-bottom: 24px; }
+  .booking-steps { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+  .booking-step {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step-num {
+    font-family: var(--font-display);
+    font-weight: 900; font-size: 13px;
+    color: var(--orange);
+    background: var(--orange-glow);
+    border: 1px solid var(--orange);
+    width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 2px;
+    flex-shrink: 0;
+    letter-spacing: 0;
+  }
+  .step-text { font-size: 14px; color: var(--cream-dim); line-height: 1.5; }
+  .step-text strong { font-weight: 600; color: var(--cream); display: block; font-family: var(--font-display); font-size: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .booking-form {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 2px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .form-group label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 14px;
+    padding: 12px 16px;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--orange); }
+  .form-group select { cursor: pointer; }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: #555; }
+  .form-note {
+    font-size: 12px;
+    color: var(--gray);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--black); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .contact-item {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .contact-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 4px;
+  }
+  .contact-value {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-value:hover { color: var(--orange); }
+  .contact-sub { font-size: 13px; color: var(--cream-dim); margin-top: 2px; }
+
+  .map-container {
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    height: 320px;
+  }
+  .map-container iframe { width: 100%; height: 100%; filter: grayscale(80%) invert(90%) hue-rotate(180deg); border: none; }
+
+  .whatsapp-banner {
+    background: #075E54;
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    border-radius: 2px;
+  }
+  .whatsapp-text h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .whatsapp-text p { font-size: 14px; color: rgba(255,255,255,0.7); margin-top: 4px; }
+  .btn-whatsapp {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366;
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .btn-whatsapp:hover { background: #1da851; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    padding: 40px 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .footer-logo span { color: var(--orange); }
+  footer p { font-size: 12px; color: var(--gray); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.6s ease forwards; opacity: 0; }
+  .fade-up:nth-child(1) { animation-delay: 0.1s; }
+  .fade-up:nth-child(2) { animation-delay: 0.2s; }
+  .fade-up:nth-child(3) { animation-delay: 0.3s; }
+  .fade-up:nth-child(4) { animation-delay: 0.4s; }
+  .fade-up:nth-child(5) { animation-delay: 0.5s; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: var(--dark); padding: 24px 5vw; gap: 0; border-bottom: 1px solid var(--border); }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--border); }
+    .nav-links a { display: block; padding: 16px 0; font-size: 16px; }
+    .nav-cta { margin-top: 16px; border-bottom: none !important; }
+    .hamburger { display: flex; }
+    #hero {
+      min-height: auto;
+      padding: 88px 5vw 44px;
+    }
+    .hero-h1 { font-size: clamp(52px, 14vw, 80px); }
+    .hero-content { grid-template-columns: 1fr; gap: 32px; }
+    .hero-copy { max-width: none; }
+    .hero-visual {
+      width: min(420px, 100%);
+      justify-self: start;
+      max-height: none;
+      padding: 10px;
+      border-radius: 12px 3px 12px 3px;
+    }
+    .hero-visual img { height: min(58vh, 420px); }
+    .hero-visual::before {
+      inset: -6px 10px 10px -6px;
+      border-radius: 10px 3px 10px 3px;
+    }
+    .hero-visual::after {
+      left: 12px;
+      right: 12px;
+      bottom: -4px;
+      height: 2px;
+    }
+    .hero-stats { margin-top: 40px; gap: 32px; padding-top: 28px; }
+    .why-grid, .booking-wrap, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .emergency-box { position: static; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { gap: 32px; }
+    .whatsapp-banner { flex-direction: column; align-items: flex-start; }
+    footer { flex-direction: column; text-align: center; }
+  }
+
+  @media (max-width: 420px) {
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+    .hero-visual img { height: min(48vh, 320px); }
+  }
+
+  /* ── Scroll reveal ── */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+/* Gallery */
+#gallery { background: var(--dark); }
+.gallery-intro {
+  color: var(--cream-dim);
+  font-size: 15px;
+  max-width: 520px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+.gallery-layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.gallery-card {
+  overflow: hidden;
+  border-radius: 2px;
+}
+.gallery-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--dark3);
+}
+.gallery-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+  filter: brightness(0.85);
+}
+.gallery-card:hover img { transform: scale(1.05); filter: brightness(1); }
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.gallery-card:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay span {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .gallery-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .gallery-layout { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Ali <span>Moto</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#booking">Book</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://wa.me/9779804204226?text=Hello%2C%20I%20want%20to%20book%20an%20appointment%20at%20Ali%20Motorcycle%20Workshop." target="_blank" class="nav-cta">WhatsApp Us</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-copy">
+      <div class="hero-tag fade-up">Kathmandu's Trusted Workshop</div>
+      <h1 class="hero-h1 fade-up">
+        <span class="orange">Ali</span><br>
+        <span class="stroke">Motor</span><br>
+        Workshop
+      </h1>
+      <p class="hero-nepali fade-up">काठमाडौंको भरोसेमान्द मोटरसाइकल सर्भिस सेन्टर</p>
+      <p class="hero-sub fade-up">From routine servicing to emergency road repairs — we keep your bike running strong. All brands. All bikes. Any problem.</p>
+      <div class="hero-actions fade-up">
+        <a href="https://wa.me/9779804204226?text=Hello%2C%20I%20want%20to%20book%20an%20appointment%20at%20Ali%20Motorcycle%20Workshop." target="_blank" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Book via WhatsApp
+        </a>
+        <a href="#booking" class="btn-secondary">Fill Appointment Form</a>
+      </div>
+      <div class="hero-stats fade-up">
+        <div>
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div>
+          <div class="stat-num">All</div>
+          <div class="stat-label">Brands Serviced</div>
+        </div>
+        <div>
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Emergency Service</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Customer Trust</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <img src="gallery/owner.png" alt="Mechanic working on a motorcycle" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-tag">What We Do</div>
+  <h2 class="section-title">Our Services</h2>
+  <p class="section-nepali">हाम्रा सेवाहरू</p>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-icon">🔧</span>
+      <div class="service-name">Full Bike Service</div>
+      <div class="service-nepali">पूर्ण बाइक सर्भिस</div>
+      <div class="service-desc">Complete engine tune-up, oil change, filter cleaning, brake check and overall performance inspection. All bike brands covered.</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">⚙️</span>
+      <div class="service-name">Repairs & Overhaul</div>
+      <div class="service-nepali">मर्मत र ओभरहल</div>
+      <div class="service-desc">Engine repairs, gear fixes, carburetor cleaning, clutch and brake system repairs. We diagnose and fix any problem fast.</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🚿</span>
+      <div class="service-name">Bike Washing</div>
+      <div class="service-nepali">बाइक धुलाई</div>
+      <div class="service-desc">Professional pressure wash and hand cleaning. Get your bike looking brand new — every visit is a showroom finish.</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">💨</span>
+      <div class="service-name">Air & Tyre Check</div>
+      <div class="service-nepali">हावा र टायर जाँच</div>
+      <div class="service-desc">Tyre pressure check, tread inspection, and free air fill. Ride safe on every road in Kathmandu.</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🛞</span>
+      <div class="service-name">Tyre Puncture</div>
+      <div class="service-nepali">टायर पंक्चर मर्मत</div>
+      <div class="service-desc">Tubeless and tube-type tyre puncture repair. Quick fix so you're back on the road with minimum wait time.</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🆘</span>
+      <div class="service-name">Emergency Roadside</div>
+      <div class="service-nepali">आपतकालीन रोडसाइड सेवा</div>
+      <div class="service-desc">Stuck on the road? Call us. We offer on-road emergency assistance in and around Kathmandu — day or night.</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🏪</span>
+      <div class="service-name">Genuine Spare Parts</div>
+      <div class="service-nepali">असली स्पेयर पार्ट्स</div>
+      <div class="service-desc">We stock and sell genuine spare parts for all major brands. Quality parts at fair prices — no compromise on your ride.</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🔍</span>
+      <div class="service-name">Free Diagnosis</div>
+      <div class="service-nepali">निःशुल्क जाँच</div>
+      <div class="service-desc">Not sure what's wrong? Bring your bike in for a free inspection. We'll tell you exactly what it needs — no hidden costs.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="why-grid">
+    <div>
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-title">Built on Trust</h2>
+      <p class="section-nepali">विश्वासमा आधारित सेवा</p>
+      <div class="why-list">
+        <div class="why-item reveal">
+          <div class="why-num">01</div>
+          <div>
+            <div class="why-item-title">Honest Pricing</div>
+            <div class="why-item-text">No surprise bills. We quote the price before we start any work. What we say is what you pay — always.</div>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">02</div>
+          <div>
+            <div class="why-item-title">All Bike Brands</div>
+            <div class="why-item-text">Hero, Honda, Bajaj, Yamaha, TVS, Royal Enfield, KTM — we work on every brand on Nepali roads.</div>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">03</div>
+          <div>
+            <div class="why-item-title">Fast Turnaround</div>
+            <div class="why-item-text">We respect your time. Most standard services are completed same-day. Major repairs get a clear timeline upfront.</div>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">04</div>
+          <div>
+            <div class="why-item-title">Experienced Mechanic</div>
+            <div class="why-item-text">Over a decade of hands-on motorcycle experience. Your bike is in expert hands — every single time.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="emergency-box reveal">
+        <h3>🆘 Emergency?<br>Call Now.</h3>
+        <div class="nepali">आपतकालीन अवस्थामा सम्पर्क गर्नुहोस्</div>
+        <p>Stuck on the road anywhere in Kathmandu? Don't panic. Call or WhatsApp us and we'll get to you as fast as possible.</p>
+        <span class="emergency-number">+977 9804204226</span>
+        <a href="https://wa.me/9779804204226?text=Emergency!%20I%20am%20stuck%20on%20the%20road%20and%20need%20help." target="_blank" class="btn-primary" style="background:rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Emergency
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="booking-wrap">
+    <div class="booking-info">
+      <div class="section-tag">Appointment</div>
+      <h2 class="section-title">Book a Service</h2>
+      <p class="section-nepali">सर्भिस बुक गर्नुहोस्</p>
+      <p>Fill the form and we'll send you a WhatsApp confirmation with your appointment slot. Fast, easy, no phone tag.</p>
+      <div class="booking-steps">
+        <div class="booking-step">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Fill the form</strong>Your name, bike model and preferred time.</div>
+        </div>
+        <div class="booking-step">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Get WhatsApp confirmation</strong>We'll confirm your slot within minutes on WhatsApp.</div>
+        </div>
+        <div class="booking-step">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Bring your bike</strong>Come to the workshop at your booked time. We'll be ready for you.</div>
+        </div>
+      </div>
+    </div>
+    <div class="booking-form reveal">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name / नाम</label>
+          <input type="text" placeholder="Ram Bahadur" id="f-name"/>
+        </div>
+        <div class="form-group">
+          <label>Phone / फोन</label>
+          <input type="tel" placeholder="+977 9804204226" id="f-phone"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Bike Model / बाइकको मोडेल</label>
+        <input type="text" placeholder="e.g. Hero Splendor, Yamaha FZ, Bajaj Pulsar" id="f-bike"/>
+      </div>
+      <div class="form-group">
+        <label>Service Needed / चाहिएको सेवा</label>
+        <select id="f-service">
+          <option value="">— Select a service —</option>
+          <option>Full Bike Service</option>
+          <option>Engine Repair</option>
+          <option>Bike Washing</option>
+          <option>Tyre Puncture</option>
+          <option>Air & Tyre Check</option>
+          <option>Spare Parts</option>
+          <option>Emergency Roadside</option>
+          <option>Free Diagnosis</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred Date / मिति</label>
+          <input type="date" id="f-date"/>
+        </div>
+        <div class="form-group">
+          <label>Preferred Time / समय</label>
+          <select id="f-time">
+            <option>Morning (8am–10am)</option>
+            <option>Late Morning (10am–12pm)</option>
+            <option>Afternoon (12pm–3pm)</option>
+            <option>Late Afternoon (3pm–6pm)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Additional Notes / थप जानकारी</label>
+        <textarea placeholder="Describe the problem or any special request..." id="f-notes"></textarea>
+      </div>
+      <p class="form-note">⚡ Clicking below opens WhatsApp with your booking details pre-filled. Quick and free.</p>
+      <button class="btn-primary" style="width:100%; justify-content:center;" onclick="sendBooking()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Send Booking on WhatsApp
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-tag">Our Work</div>
+  <h2 class="section-title">Workshop Gallery</h2>
+  <p class="section-nepali">हाम्रो कार्यशाला</p>
+  <p class="gallery-intro">
+    Real bikes. Real repairs. A glimpse into what we do every day at Ali Motorcycle Workshop.
+  </p>
+
+  <div class="gallery-layout">
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap">
+        <img src="gallery/bike1.png" alt="Bike washing" loading="lazy"/>
+        <div class="gallery-overlay"><span>Bike Wash</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap">
+        <img src="gallery/bike2.png" alt="Spare parts" loading="lazy"/>
+        <div class="gallery-overlay"><span>Spare Parts</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap">
+        <img src="gallery/bike3.png" alt="Tyre puncture repair" loading="lazy"/>
+        <div class="gallery-overlay"><span>Tyre Repair</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap">
+        <img src="gallery/bike4.png" alt="Workshop front view" loading="lazy"/>
+        <div class="gallery-overlay"><span>Our Workshop</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap">
+        <img src="gallery/bike5.png" alt="Road emergency service" loading="lazy"/>
+        <div class="gallery-overlay"><span>Emergency Service</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap">
+        <img src="gallery/bike6.png" alt="Engine repair" loading="lazy"/>
+        <div class="gallery-overlay"><span>Engine Repair</span></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-tag">Find Us</div>
+  <h2 class="section-title">Contact & Location</h2>
+  <p class="section-nepali">सम्पर्क र ठेगाना</p>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-item reveal">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <a href="tel:+9779804204226" class="contact-value">+977 9804204226</a>
+          <div class="contact-sub">Call anytime — we answer fast</div>
+        </div>
+      </div>
+      <div class="contact-item reveal">
+        <div class="contact-icon">💬</div>
+        <div>
+          <div class="contact-label">WhatsApp</div>
+          <a href="https://wa.me/9779804204226" target="_blank" class="contact-value">Chat with Us</a>
+          <div class="contact-sub">Fastest way to reach us</div>
+        </div>
+      </div>
+      <div class="contact-item reveal">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <span class="contact-value" style="cursor:default">Sairam Marg, Kathmandu 44600, Nepal</span>
+          <div class="contact-sub">Wow Mo:Mo & Burger House</div>
+        </div>
+      </div>
+      <div class="contact-item reveal">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <div class="contact-label">Working Hours</div>
+          <span class="contact-value" style="cursor:default; font-size:17px">7:00 AM – 10:00 PM</span>
+          <div class="contact-sub">Sunday–Saturday · Friday by appointment</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="map-container">
+        <!-- Replace src with your actual Google Maps embed URL for the shop location -->
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1553.4!2d85.3612994!3d27.6903241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b001f9f5e69%3A0x9fa5a679a793e420!2sR%20K%20Motorcycle%20Hospital!5e0!3m2!1sen!2snp!4v1713456789"          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+  <div class="whatsapp-banner reveal">
+    <div class="whatsapp-text">
+      <h3>💬 Message us on WhatsApp</h3>
+      <p>Ask a question, get a quote, or book an appointment — all on WhatsApp, totally free.</p>
+    </div>
+    <a href="https://wa.me/9779804204226?text=Hello%2C%20I%20want%20to%20enquire%20about%20bike%20service%20at%20Ali%20Motorcycle%20Workshop." target="_blank" class="btn-whatsapp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Open WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Ali <span>Moto</span> Workshop</div>
+  <p>© 2025 Ali Motorcycle Workshop, Kathmandu, Nepal</p>
+  <p style="font-size:11px; color:#555;">Built with ❤️ — All rights reserved</p>
+</footer>
+
+<script>
+// Nav toggle
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+// Close nav on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Set min date for booking
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('f-date').min = today;
+document.getElementById('f-date').value = today;
+
+// Booking via WhatsApp
+function sendBooking() {
+  const name    = document.getElementById('f-name').value.trim();
+  const phone   = document.getElementById('f-phone').value.trim();
+  const bike    = document.getElementById('f-bike').value.trim();
+  const service = document.getElementById('f-service').value;
+  const date    = document.getElementById('f-date').value;
+  const time    = document.getElementById('f-time').value;
+  const notes   = document.getElementById('f-notes').value.trim();
+
+  if (!name || !phone || !bike || !service) {
+    alert('Please fill in your name, phone, bike model, and select a service.');
+    return;
+  }
+
+  const formatted = new Date(date + 'T00:00:00');
+  const niceDate = formatted.toLocaleDateString('en-GB', {
+    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+  });
+
+  const notesLine = notes ? `*Notes:*   ${notes}\n` : '';
+
+  const msg =
+`*NEW APPOINTMENT*
+*Ali Motorcycle Workshop*
+━━━━━━━━━━━━━━━━━━━━
+*Name:*    ${name}
+*Phone:*   ${phone}
+*Bike:*    ${bike}
+*Service:* ${service}
+━━━━━━━━━━━━━━━━━━━━
+*Date:*    ${niceDate}
+*Time:*    ${time}
+━━━━━━━━━━━━━━━━━━━━
+${notesLine}Please confirm my appointment. Thank you!`;
+
+  const waNum = '9779804204226';
+  window.open(`https://wa.me/${waNum}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+</script>
+</body>
+</html>
