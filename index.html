@@ -15,7 +15,12 @@
 <meta name="theme-color" content="#E8521A"/>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23E8521A'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white'%3EAM%3C/text%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&family=Tiro+Devanagari+Hindi&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet"/>
+</noscript>
+<link rel="preload" as="image" href="gallery/owner.webp"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -802,7 +807,7 @@
         <span class="stroke">Motor</span><br>
         Workshop
       </h1>
-      <p class="hero-nepali fade-up">काठमाडौंको भरोसेमान्द मोटरसाइकल सर्भिस सेन्टर</p>
+      <p class="hero-nepali fade-up" lang="ne">काठमाडौंको भरोसेमान्द मोटरसाइकल सर्भिस सेन्टर</p>
       <p class="hero-sub fade-up">From routine servicing to emergency road repairs — we keep your bike running strong. All brands. All bikes. Any problem.</p>
       <div class="hero-actions fade-up">
         <a href="https://wa.me/9779804204226?text=Hello%2C%20I%20want%20to%20book%20an%20appointment%20at%20Ali%20Motorcycle%20Workshop." target="_blank" class="btn-primary">
@@ -832,7 +837,7 @@
     </div>
 
     <div class="hero-visual reveal">
-      <img src="gallery/owner.webp" alt="Mechanic working on a motorcycle" loading="lazy"/>
+      <img src="gallery/owner.webp" alt="Mechanic working on a motorcycle" loading="eager" fetchpriority="high"/>
     </div>
   </div>
 </section>
@@ -841,7 +846,7 @@
 <section id="services">
   <div class="section-tag">What We Do</div>
   <h2 class="section-title">Our Services</h2>
-  <p class="section-nepali">हाम्रा सेवाहरू</p>
+  <p class="section-nepali" lang="ne">हाम्रा सेवाहरू</p>
   <div class="services-grid">
     <div class="service-card reveal">
       <span class="service-icon">🔧</span>
@@ -900,7 +905,7 @@
     <div>
       <div class="section-tag">Why Choose Us</div>
       <h2 class="section-title">Built on Trust</h2>
-      <p class="section-nepali">विश्वासमा आधारित सेवा</p>
+      <p class="section-nepali" lang="ne">विश्वासमा आधारित सेवा</p>
       <div class="why-list">
         <div class="why-item reveal">
           <div class="why-num">01</div>
@@ -953,7 +958,7 @@
     <div class="booking-info">
       <div class="section-tag">Appointment</div>
       <h2 class="section-title">Book a Service</h2>
-      <p class="section-nepali">सर्भिस बुक गर्नुहोस्</p>
+      <p class="section-nepali" lang="ne">सर्भिस बुक गर्नुहोस्</p>
       <p>Fill the form and we'll send you a WhatsApp confirmation with your appointment slot. Fast, easy, no phone tag.</p>
       <div class="booking-steps">
         <div class="booking-step">
@@ -973,20 +978,20 @@
     <div class="booking-form reveal">
       <div class="form-row">
         <div class="form-group">
-          <label>Your Name / नाम</label>
+          <label for="f-name">Your Name / नाम</label>
           <input type="text" placeholder="Ram Bahadur" id="f-name"/>
         </div>
         <div class="form-group">
-          <label>Phone / फोन</label>
+          <label for="f-phone">Phone / फोन</label>
           <input type="tel" placeholder="+977 9804204226" id="f-phone"/>
         </div>
       </div>
       <div class="form-group">
-        <label>Bike Model / बाइकको मोडेल</label>
+        <label for="f-bike">Bike Model / बाइकको मोडेल</label>
         <input type="text" placeholder="e.g. Hero Splendor, Yamaha FZ, Bajaj Pulsar" id="f-bike"/>
       </div>
       <div class="form-group">
-        <label>Service Needed / चाहिएको सेवा</label>
+        <label for="f-service">Service Needed / चाहिएको सेवा</label>
         <select id="f-service">
           <option value="">— Select a service —</option>
           <option>Full Bike Service</option>
@@ -1002,11 +1007,11 @@
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Preferred Date / मिति</label>
+          <label for="f-date">Preferred Date / मिति</label>
           <input type="date" id="f-date"/>
         </div>
         <div class="form-group">
-          <label>Preferred Time / समय</label>
+          <label for="f-time">Preferred Time / समय</label>
           <select id="f-time">
             <option>Morning (8am–10am)</option>
             <option>Late Morning (10am–12pm)</option>
@@ -1016,7 +1021,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label>Additional Notes / थप जानकारी</label>
+        <label for="f-notes">Additional Notes / थप जानकारी</label>
         <textarea placeholder="Describe the problem or any special request..." id="f-notes"></textarea>
       </div>
       <p class="form-note">⚡ Clicking below opens WhatsApp with your booking details pre-filled. Quick and free.</p>
@@ -1032,7 +1037,7 @@
 <section id="gallery">
   <div class="section-tag">Our Work</div>
   <h2 class="section-title">Workshop Gallery</h2>
-  <p class="section-nepali">हाम्रो कार्यशाला</p>
+  <p class="section-nepali" lang="ne">हाम्रो कार्यशाला</p>
   <p class="gallery-intro">
     Real bikes. Real repairs. A glimpse into what we do every day at Ali Motorcycle Workshop.
   </p>
@@ -1087,7 +1092,7 @@
 <section id="contact">
   <div class="section-tag">Find Us</div>
   <h2 class="section-title">Contact & Location</h2>
-  <p class="section-nepali">सम्पर्क र ठेगाना</p>
+  <p class="section-nepali" lang="ne">सम्पर्क र ठेगाना</p>
   <div class="contact-grid">
     <div>
       <div class="contact-item reveal">
@@ -1127,6 +1132,7 @@
       <div class="map-container">
         <!-- Replace src with your actual Google Maps embed URL for the shop location -->
         <iframe
+          title="Ali Motorcycle Workshop location on Google Maps"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1553.4!2d85.3612994!3d27.6903241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b001f9f5e69%3A0x9fa5a679a793e420!2sR%20K%20Motorcycle%20Hospital!5e0!3m2!1sen!2snp!4v1713456789"          allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
