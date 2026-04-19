@@ -20,13 +20,9 @@ Ali Moto Workshop is a responsive, single-page website for a motorcycle workshop
 1. Clone this repository.
 2. Open `index.html` directly in your browser.
 
-Optional (recommended): serve with any static server for local testing, for example VS Code Live Server.
-
 ## Deployment
 This project can be deployed to any static hosting platform, including:
-- GitHub Pages
 - Netlify
-- Vercel
 
 ## License
 All rights reserved unless stated otherwise by the repository owner.
